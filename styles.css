@@ -1,0 +1,19 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Overpass', sans-serif;
+}
+
+section:nth-child(even) {
+  background: #f9f9f9;
+}
