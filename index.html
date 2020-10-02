@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Project Name</h1>
+  <h1>Predicting Wins/Performance of NFL Quarterbacks</h1>
 
   <section class="intro">
     <h2>Introduction</h2> 
@@ -19,23 +19,33 @@
   <section class="methods">
     <h2>Methods</h2> 
     <p>For this project, a dimensionality reduction method must first be used to determine what features from the many available to us are most important in terms of predicting future wins.
-    Principal Component Analysis (PCA) will be used to find the features that explain the most variance in the target variable so that a more efficient model can be made afterwards.
-    Ridge Regression is our initial choice for the supervised model that will predict the amount of wins a quarterback will get in a future season.
-    A Regression model will predict an actual integer value for our target variable unlike a classification algorithm, which is what we want in terms of predicting future wins.
-    We also do not want sharp fluctuations in our predicted output, and using Ridge Regression will help optimize the complexity of the model to ensure a smoother fit.</p>
+    Principal Component Analysis (PCA) will be used to find the features that explain the most variance in the target variable so that a more efficient model can be made afterwards. In this way, 
+    less necessary features such as uniform number can be eliminated to allow better focus on relevant features. Ridge Regression is our initial choice for the supervised model that will 
+    predict the amount of wins a quarterback will get in a future season. A regression model will predict an actual integer value for our target variable unlike a classification algorithm, 
+    which is what we want in terms of predicting future wins. We also do not want sharp fluctuations in our predicted output, and using Ridge Regression will help optimize the complexity of 
+    the model to ensure a smoother fit.
+    </p>
   </section>
   <section class="results">
     <h2>Results</h2> 
-    <p>Text</p>
+    <p>Our hope is that our model provides a fairly accurate means of predicting quarterback performance in the long term. Currently, most quarterback analysis done through traditional scouting 
+    and statistical analysis. Furthermore, most of our research into other machine learning models of this type looked only at single season performance for quarterbacks. We want to project a 
+    player's performance over the course of multiple seasons to give a better indication of long-term value and ideal contracting for any player.
+    </p>
   </section>
   <section class="discussion">
     <h2>Discussion</h2> 
-    <p>Text</p>
+    <p>The best possible outcome for our model is that it predicts long-term performance of NFL quarterbacks with high accuracy. If the model is able to surpass traditional scouting and 
+    analysis methods, it could provide a new means of determining which players are worthy of investment. Machine analysis of player performance as far back as college games could provide 
+    a much simpler means of drafting. If the model is able to perform well, a logical next step would be to expand the model to include other positions. Obviously, the features would be much
+    different for each position, but it is not outside the realm of possibility of training the model on other features for the purpose of analyzing the performance of all NFL players.
+    </p>
   </section>
   <section class="references">
     <h2>References</h2>  
     <ul>
-      <li>Multilevel time series modeling:<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5978585/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5978585/</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5978585/">A Multilevel Multiset Time-Series Model for Describing Complex Developmental Processes</a></li>
+      <li><a href="http://pzs.dstu.dp.ua/DataMining/pca/bibl/Principal%20components%20analysis.pdf">Principal Component Analysis</a></li>
     </ul>
   </section>
   <script src="main.js"></script>
