@@ -1,18 +1,23 @@
+/*** COLORS ***
+Dark Green: #206a5d
+Green: #206a5d
+Light Green: #bfdcae
+Beige: #f1f1e8
+*/
+
 * {
   font-family: 'Raleway', sans-serif;
-  padding: 20px;
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-size: 16px;
   color: #333;
 }
 
-body {
-  max-width: 1100px;
-  margin: 0 auto;
+h1 {
+    font-weight: 900;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -21,15 +26,86 @@ h6 {
   font-family: 'Overpass', sans-serif;
 }
 
+.wrapper {
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
 h1 {
-  font-size: 30px;
+  font-size: 54px;
+  color: #206a5d;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
+  color: #206a5d;
+  /* color: #bfdcae; */
 }
 
-section:nth-child(even) {
-  background: #f9f9f9;
+h3 {
+    font-size: 24px;
+    color: #81b214;;
 }
 
+section:nth-child(odd) {
+    background: #f1f1e8;
+}
+
+section p {
+    line-height: 2em;
+}
+
+#hero {
+    text-align: center;
+    padding: 60px 40px;
+    background: url("https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/funky-lines.png");
+    position: relative;
+}
+
+#hero h1 {
+    margin: 10px 0;
+}
+
+.qb1,
+.qb2 {
+    width: 300px;
+    bottom: 0;
+    position: absolute;
+    filter: grayscale(1) brightness(2.5) contrast(0.5);
+}
+
+.qb1 {    
+    left: 5%;
+}
+
+.qb2 {
+    right: 5%;
+}
+
+a {
+    color: #81b214;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #206a5d;
+    width: 200px;
+    margin: 20px auto 0 auto;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+ul li {
+    margin: 10px 0 10px 20px;
+}
+
+.intro img {
+    width: 100%;
+}
