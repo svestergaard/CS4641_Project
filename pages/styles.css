@@ -46,7 +46,8 @@ h2 {
 
 h3 {
     font-size: 24px;
-    color: #81b214;;
+    color: #81b214;
+    margin-top: 30px;
 }
 
 section:nth-child(odd) {
@@ -106,6 +107,15 @@ ul li {
     margin: 10px 0 10px 20px;
 }
 
-.intro img {
+img {
     width: 100%;
+}
+
+#scree {
+  width: 60%;
+  margin: 0 5%;
+}
+
+#pca_table {
+  width: 24%;
 }
