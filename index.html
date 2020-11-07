@@ -24,23 +24,23 @@
     </section>
     <section class="methods">
         <div class="wrapper">
-            <h2>Methods</h2> 
+            <h2>Methods Overview</h2> 
             <p>For this project, a dimensionality reduction method must first be used to determine what features from the many available to us are most important in terms of predicting future wins.
             Principal Component Analysis (PCA) will be used to find the features that explain the most variance in the target variable so that a more efficient model can be made afterwards. In this way, 
             less necessary features such as uniform number can be eliminated to allow better focus on relevant features. Ridge Regression is our initial choice for the supervised model that will 
             predict the amount of wins a quarterback will get in a future season. A regression model will predict an actual integer value for our target variable unlike a classification algorithm, 
             which is what we want in terms of predicting future wins. We also do not want sharp fluctuations in our predicted output, and using Ridge Regression will help optimize the complexity of 
             the model to ensure a smoother fit. To compare this result to other methods, we also plan to use a neural network which should perform better at solving the interactions between input variables.
+            </p>       
+
+            <h3>Supervised Methods</h3> 
+            <p>For our supervised learning methods, we are planning to use ridge regression and random forest regression. We initially decided that regression would
+                be the best way to approach this problem, since we are trying to predict a numerical result. However, we have also considered the possibility
+                of approaching this problem from a classification standpoint rather than regression, since the range of possible target values is quite small. 
+                Our clustering provided us with some early optimism in this regard, and we believe logistic regression and neural networks to be potentially valuable for
+                this purpose.
             </p>
         </div>  
-
-        <h3>Supervised Methods</h3> 
-        <p>For our supervised learning methods, we are planning to use ridge regression and random forest regression. We initially decided that regression would
-            be the best way to approach this problem, since we are trying to predict a numerical result. However, we have also considered the possibility
-            of approaching this problem from a classification standpoint rather than regression, since the range of possible target values is quite small. 
-            Our clustering provided us with some early optimism in this regard, and we believe logistic regression and neural networks to be potentially valuable for
-            this purpose.
-        </p>
       
     </section>
     <section class="data">
