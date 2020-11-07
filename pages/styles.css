@@ -35,13 +35,17 @@ h6 {
 }
 
 .col-3 {
-  width: 33%;
+  width: 30%;
   float: left;
+  margin: 0 1.5%;
 }
 
 .col-3 li {
-  font-weight: bold;
   color: #206a5d;
+}
+
+.col-3 li span {
+  font-weight: bold;
 }
 
 h1 {
