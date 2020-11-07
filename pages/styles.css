@@ -136,17 +136,17 @@ img {
   width: 24%;
 }
 
-img .center {
+img.center {
   width: 50%;
   margin: 20px 25%;
 }
 
-img .center_wide {
+img.center_wide {
   width: 80%;
   margin: 10px 10%;
 }
 
-img .half {
+img.half {
   width: 30%;
   margin: 20px 10%;
   float: left;
