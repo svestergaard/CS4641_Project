@@ -32,10 +32,10 @@
             which is what we want in terms of predicting future wins. We also do not want sharp fluctuations in our predicted output, and using Ridge Regression will help optimize the complexity of 
             the model to ensure a smoother fit. To compare this result to other methods, we also plan to use a neural network which should perform better at solving the interactions between input variables.
             </p>
-        </div>  
-        
+        </div>
+    </section>
+    <section class="data">
         <div class="wrapper">
-        <section>
             <h2>Data</h2>
             <p>The dataset we used was acquired from Pro-Football-Reference.com. It contains complete statistics for all quarterbacks dating back
             to 1985. The value we are trying to predict is the number of wins a quarterback will achieve in a subsequent season, so each data point 
@@ -52,8 +52,9 @@
                 split. We also standardized our dataset such that each feature would have a mean of 0 and standard deviation of 1. This is because some of the methods we are using
                 are sensitive to distance/magnitude, so we need to make sure that features are all on the same scale. 
             </p>
-
-            The features remaining break down into the following:
+            <br>
+            <p>The features remaining break down into the following:</p>
+            <br>
             <ul>
                 <li>Year</li>
                 <li>Age</li>
@@ -91,10 +92,7 @@
                 <li>Pts: Total points (does not include passing TDs)</li>
                 <li>PB: Pro Bowl selections</li>
                 <li>AP1: 1st team All Pro selections</li>
-                
-        </section>
         </div>
-        
     </section>
     <section class="results">
         <div class="wrapper">
