@@ -115,6 +115,27 @@
             </p>
             <h3>Linearly Independent Features</h3>
             <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
+            <h3>K-Means Analysis</h3>
+            <p>
+                We wanted to perform unsupervised clustering on our dataset to see if we could identify any trends in the data. With a perfect dataset, we would expect that K-Means would group data points into 17 distinct groups,
+                corresponding to the number of projected wins 0 through 16. Obviously this is unrealistic, but it sets a useful baseline for how accurately our data points map to their respective labels. First, we analyzed the loss
+                for each number of clusters in a specific range.
+            </p>
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-elbow.png" alt="K-Means Elbow Method">
+            <p>
+                The ideal amount of clusters is not too obvious with this visualization, but the elbow method suggests that it lies around five clusters. Next, we output the results of K-means using specifically 5 clusters. The data below
+                shows that the clusters are spread somewhat evenly, but the more concerning visualization to us was how well these clusters mapped to average wins. If each cluster had been created well, then we would expect to see a smooth
+                gradient of wins between each cluster. With the exception of a couple of columns, this proved to be fairly true. These results for K-means with 5 clusters are shown below.
+            </p>
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-5.png" alt="K-Means Visualization">
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-5.png" alt="Average Wins Per Cluster">
+            <p>
+                As mentioned earlier, a perfect dataset could map all players into the correct grouping of 17 clusters. Although the elbow method suggested 5 clusters, we wanted to view the dataset from this perspective too. The output shows
+                is again mapped somewhat evenly. Analyzing how well clusters mapped to our ideal gradient of 0 through 16 wins, we found a reasonable spread of average wins. The average wins per cluster range from roughly 2 to 10 wins. While
+                this is not perfect, it is well enough of a spread to prove features hold relevance when projecting season wins. These results for K-means with 17 clusters are shown below.
+            </p>
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-17.png" alt="K-Means Visualization">
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-17.png" alt="Average Wins Per Cluster">
             <h3>Principal Component Analysis</h3>
             <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
             <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
