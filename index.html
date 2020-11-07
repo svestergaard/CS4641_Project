@@ -32,7 +32,29 @@
             which is what we want in terms of predicting future wins. We also do not want sharp fluctuations in our predicted output, and using Ridge Regression will help optimize the complexity of 
             the model to ensure a smoother fit. To compare this result to other methods, we also plan to use a neural network which should perform better at solving the interactions between input variables.
             </p>
-        </div>        
+        </div>  
+        
+        <div class="wrapper">
+        <section>
+            <h2>Data</h2>
+            <p>The dataset we used was acquired from Pro-Football-Reference.com. It contains complete statistics for all quarterbacks dating back
+            to 1985. The value we are trying to predict is the number of wins a quarterback will achieve in a subsequent season, so each data point 
+            was labelled with that quarterback's win total in the immediate next season played (a possible range of 0 to 16). In order to ensure that all data points are valid,
+            we filtered out all instances in which a quarterback did not start at least one game and throw at least 20 passes in two consecutive seasons.
+            This ensures that both the current season statistics and next season win total are meaningful values. After doing this, a number of features were
+            discarded from the dataset. This includes meaningless values such as player name or team name, that obviously have no bearing on QB performance. Certain
+            other features, such as those related to field goal kicking were also discarded, since the vast majority of NFL QBs will never kick a field goal,
+            and this stat is therefore, irrelevant to QB performance. Lastly, certain derived stats, such as PFR's Approximate Value stat, because these
+            statistics are calculated from other features already in the dataset, therefore not providing additional information. After these steps, we were
+            left with 36 features.</p>
+            <br>
+            <p>Before we could apply any of our chosen methods, we first had to split our dataset into training and testing sets, which we did using a 70-30 training to testing
+                split. We also standardized our dataset such that each feature would have a mean of 0 and standard deviation of 1. This is because some of the methods we are using
+                are sensitive to distance/magnitude, so we need to make sure that features are all on the same scale. 
+            </p>
+        </section>
+        </div>
+        
     </section>
     <section class="results">
         <div class="wrapper">
