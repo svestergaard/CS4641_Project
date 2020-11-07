@@ -39,6 +39,10 @@ h6 {
   float: left;
 }
 
+.col-33 li {
+  font-weight: bold;
+  color: #206a5d;
+
 h1 {
   font-size: 54px;
   color: #206a5d;
