@@ -44,8 +44,10 @@
             </p>
         </div> 
         
+        </div>
+    </section>
+    <section class="data">
         <div class="wrapper">
-        <section>
             <h2>Data</h2>
             <p>The dataset we used was acquired from Pro-Football-Reference.com. It contains complete statistics for all quarterbacks dating back
             to 1985. The value we are trying to predict is the number of wins a quarterback will achieve in a subsequent season, so each data point 
@@ -62,8 +64,9 @@
                 split. We also standardized our dataset such that each feature would have a mean of 0 and standard deviation of 1. This is because some of the methods we are using
                 are sensitive to distance/magnitude, so we need to make sure that features are all on the same scale. 
             </p>
-
-            The features remaining break down into the following:
+            <br>
+            <p>The features remaining break down into the following:</p>
+            <br>
             <ul>
                 <li>Year</li>
                 <li>Age</li>
@@ -101,10 +104,7 @@
                 <li>Pts: Total points (does not include passing TDs)</li>
                 <li>PB: Pro Bowl selections</li>
                 <li>AP1: 1st team All Pro selections</li>
-                
-        </section>
         </div>
-        
     </section>
     <section class="results">
         <div class="wrapper">
@@ -113,6 +113,14 @@
             and statistical analysis. Furthermore, most of our research into other machine learning models of this type looked only at single season performance for quarterbacks. We want to project a 
             player's performance over the course of multiple seasons to give a better indication of long-term value and ideal contracting for any player.
             </p>
+            <h3>Linearly Independent Features</h3>
+            <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
+            <h3>Principal Component Analysis</h3>
+            <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
+            <p>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.</p>
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
         </div>        
     </section>
     <section class="discussion">
