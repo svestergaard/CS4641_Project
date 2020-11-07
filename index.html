@@ -34,17 +34,14 @@
             </p>
         </div>  
 
-        <div class="wrapper">
-            <h2>Supervised Methods</h2> 
-            <p>For our supervised learning methods, we are planning to use ridge regression and random forest regression. We initially decided that regression would
-                be the best way to approach this problem, since we are trying to predict a numerical result. However, we have also considered the possibility
-                of approaching this problem from a classification standpoint rather than regression, since the range of possible target values is quite small. 
-                Our clustering provided us with some early optimism in this regard, and we believe logistic regression and neural networks to be potentially valuable for
-                this purpose.
-            </p>
-        </div> 
-        
-        </div>
+        <h3>Supervised Methods</h3> 
+        <p>For our supervised learning methods, we are planning to use ridge regression and random forest regression. We initially decided that regression would
+            be the best way to approach this problem, since we are trying to predict a numerical result. However, we have also considered the possibility
+            of approaching this problem from a classification standpoint rather than regression, since the range of possible target values is quite small. 
+            Our clustering provided us with some early optimism in this regard, and we believe logistic regression and neural networks to be potentially valuable for
+            this purpose.
+        </p>
+      
     </section>
     <section class="data">
         <div class="wrapper">
@@ -124,7 +121,7 @@
             <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
             <img id="scree" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
             <img id="pca_table" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
-            <p>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.</p>
+            <p><br>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.<br><br></p>
             <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
         </div>        
     </section>
