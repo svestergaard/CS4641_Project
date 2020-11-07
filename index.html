@@ -67,7 +67,7 @@
             <br>
             <p>The features remaining break down into the following:</p>
             <br>
-            <ul>
+            <ul class="col-3">
                 <li>Year</li>
                 <li>Age</li>
                 <li>Ht: Height</li>
@@ -80,6 +80,8 @@
                 <li>Cmp%: Completion rate</li>
                 <li>Yds: Passing yards</li>
                 <li>TD: Passing touchdowns</li>
+            </ul>
+            <ul class="col-3">
                 <li>Int: Interceptions thrown</li>
                 <li>Pick6: Interceptions thrown returned for touchdown</li>
                 <li>TD%: Passing touchdown rate</li>
@@ -92,6 +94,8 @@
                 <li>Y/G: Yards per game</li>
                 <li>W: Wins</li>
                 <li>L: Losses</li>
+            </ul>
+            <ul class="col-3">
                 <li>T: Ties</li>
                 <li>4QC: 4th quarter comebacks</li>
                 <li>GWD: Game winning drives</li>
@@ -104,6 +108,7 @@
                 <li>Pts: Total points (does not include passing TDs)</li>
                 <li>PB: Pro Bowl selections</li>
                 <li>AP1: 1st team All Pro selections</li>
+            </ul>
         </div>
     </section>
     <section class="results">
@@ -117,8 +122,8 @@
             <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
             <h3>Principal Component Analysis</h3>
             <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
+            <img id="scree" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
+            <img id="pca_table" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
             <p>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.</p>
             <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
         </div>        
