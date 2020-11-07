@@ -31,6 +31,21 @@ h6 {
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
+    overflow: overlay;
+}
+
+.col-3 {
+  width: 30%;
+  float: left;
+  margin: 0 1.5%;
+}
+
+.col-3 li {
+  color: #206a5d;
+}
+
+.col-3 li span {
+  font-weight: bold;
 }
 
 h1 {
@@ -46,7 +61,8 @@ h2 {
 
 h3 {
     font-size: 24px;
-    color: #81b214;;
+    color: #81b214;
+    margin-top: 30px;
 }
 
 section:nth-child(odd) {
@@ -106,6 +122,15 @@ ul li {
     margin: 10px 0 10px 20px;
 }
 
-.intro img {
+img {
     width: 100%;
+}
+
+#scree {
+  width: 60%;
+  margin: 0 5%;
+}
+
+#pca_table {
+  width: 24%;
 }
