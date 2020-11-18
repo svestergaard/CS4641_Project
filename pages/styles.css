@@ -90,7 +90,7 @@ section p {
     width: 300px;
     bottom: 0;
     position: absolute;
-    filter: grayscale(1) brightness(2.5) contrast(0.5);
+    filter: grayscale(1) brightness(3.5) contrast(0.8);
 }
 
 .qb1 {    
