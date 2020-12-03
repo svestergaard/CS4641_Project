@@ -108,82 +108,6 @@
             </ul>
         </div>
     </section>
-    <section class="results">
-        <div class="wrapper">
-            <h2>Unsupervised Results</h2> 
-            <p>Our hope is that our model provides a fairly accurate means of predicting quarterback performance in the long term. Currently, most quarterback analysis done through traditional scouting 
-            and statistical analysis. Furthermore, most of our research into other machine learning models of this type looked only at single season performance for quarterbacks. We want to project a 
-            player's performance over the course of multiple seasons to give a better indication of long-term value and ideal contracting for any player.
-            </p>
-            <h3>Linearly Independent Features</h3>
-            <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
-            <h3>K-Means Analysis</h3>
-            <p>
-                We wanted to perform unsupervised clustering on our dataset to see if we could identify any trends in the data. With a perfect dataset, we would expect that K-Means would group data points into 17 distinct groups,
-                corresponding to the number of projected wins 0 through 16. Obviously this is unrealistic, but it sets a useful baseline for how accurately our data points map to their respective labels. First, we analyzed the loss
-                for each number of clusters in a specific range.
-            </p>
-            <img class="center" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-elbow.png" alt="K-Means Elbow Method">
-            <p>
-                The ideal amount of clusters is not too obvious with this visualization, but the elbow method suggests that it lies around five clusters. Next, we output the results of K-means using specifically 5 clusters. The data below
-                shows that the clusters are spread somewhat evenly, but the more concerning visualization to us was how well these clusters mapped to average wins. If each cluster had been created well, then we would expect to see a smooth
-                gradient of wins between each cluster. With the exception of a couple of columns, this proved to be fairly true. These results for K-means with 5 clusters are shown below.
-            </p>
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-5.png" alt="K-Means Visualization">
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-5.png" alt="Average Wins Per Cluster">
-            <p>
-                As mentioned earlier, a perfect dataset could map all players into the correct grouping of 17 clusters. Although the elbow method suggested 5 clusters, we wanted to view the dataset from this perspective too. The output shows
-                is again mapped somewhat evenly. Analyzing how well clusters mapped to our ideal gradient of 0 through 16 wins, we found a reasonable spread of average wins. The average wins per cluster range from roughly 2 to 10 wins. While
-                this is not perfect, it is well enough of a spread to prove features hold relevance when projecting season wins. These results for K-means with 17 clusters are shown below.
-            </p>
-            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-17.png" alt="K-Means Visualization">
-            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-17.png" alt="Average Wins Per Cluster">
-          <h3>Principal Component Analysis</h3>
-            <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
-            <img id="scree" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
-            <img id="pca_table" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
-            <p><br>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.<br><br></p>
-            <img src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
-        </div>        
-    </section>
-    <section class="results">
-        <div class="wrapper">
-            <h2>Unsupervised Results</h2> 
-            <p>Our hope is that our model provides a fairly accurate means of predicting quarterback performance in the long term. Currently, most quarterback analysis is done through traditional scouting 
-            and statistical analysis. Furthermore, most of our research into other machine learning models of this type looked only at single season performance for quarterbacks. We want to project a 
-            player's performance over the course of multiple seasons to give a better indication of long-term value and ideal contracting for any player.
-            </p>
-            <h3>Linearly Independent Features</h3>
-            <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
-            <h3>K-Means Analysis</h3>
-            <p>
-                We wanted to perform unsupervised clustering on our dataset to see if we could identify any trends in the data. With a perfect dataset, we would expect that K-Means would group data points into 17 distinct groups,
-                corresponding to the number of projected wins 0 through 16. Obviously this is unrealistic, but it sets a useful baseline for how accurately our data points map to their respective labels. First, we analyzed the loss
-                for each number of clusters in a specific range.
-            </p>
-            <img class="center" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-elbow.png" alt="K-Means Elbow Method">
-            <p>
-                The ideal amount of clusters is not too obvious with this visualization, but the elbow method suggests that it lies around five clusters. Next, we output the results of K-means using specifically 5 clusters. The data below
-                shows that the clusters are spread somewhat evenly, but the more concerning visualization to us was how well these clusters mapped to average wins. If each cluster had been created well, then we would expect to see a smooth
-                gradient of wins between each cluster. With the exception of a couple of columns, this proved to be fairly true. These results for K-means with 5 clusters are shown below.
-            </p>
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-5.png" alt="K-Means Visualization">
-            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-5.png" alt="Average Wins Per Cluster">
-            <p>
-                As mentioned earlier, a perfect dataset could map all players into the correct grouping of 17 clusters. Although the elbow method suggested 5 clusters, we wanted to view the dataset from this perspective too. The output shows
-                is again mapped somewhat evenly. Analyzing how well clusters mapped to our ideal gradient of 0 through 16 wins, we found a reasonable spread of average wins. The average wins per cluster range from roughly 2 to 10 wins. While
-                this is not perfect, it is well enough of a spread to prove features hold relevance when projecting season wins. These results for K-means with 17 clusters are shown below.
-            </p>
-            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-17.png" alt="K-Means Visualization">
-            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-17.png" alt="Average Wins Per Cluster">
-          <h3>Principal Component Analysis</h3>
-            <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
-            <img id="scree" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
-            <img id="pca_table" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
-            <p><br>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.<br><br></p>
-            <img src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
-        </div>        
-    </section>
     <section class="discussion">
         <div class="wrapper">
             <h2>Discussion</h2> 
@@ -191,6 +115,68 @@
             analysis methods, it could provide a new means of determining which players are worthy of investment. Machine analysis of player performance as far back as college games could provide 
             a much simpler means of drafting. If the model is able to perform well, a logical next step would be to expand the model to include other positions. Obviously, the features would be much
             different for each position, but it is not outside the realm of possibility of training the model on other features for the purpose of analyzing the performance of all NFL players.
+            </p>
+        </div>        
+    </section>
+    <section class="results">
+        <div class="wrapper">
+            <h2>Unsupervised Results</h2> 
+            <p>Our hope is that our model provides a fairly accurate means of predicting quarterback performance in the long term. Currently, most quarterback analysis done through traditional scouting 
+            and statistical analysis. Ideally, our model could provide a new means of predicting the utility of quarterbacks in the NFL.
+            </p>
+            <h3>Linearly Independent Features</h3>
+            <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
+            <h3>K-Means Analysis</h3>
+            <p>
+                We wanted to perform unsupervised clustering on our dataset to see if we could identify any trends in the data. With a perfect dataset, we would expect that K-Means would group data points into 17 distinct groups,
+                corresponding to the number of projected wins 0 through 16. Obviously this is unrealistic, but it sets a useful baseline for how accurately our data points map to their respective labels. First, we analyzed the loss
+                for each number of clusters in a specific range.
+            </p>
+            <img class="center" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-elbow.png" alt="K-Means Elbow Method">
+            <p>
+                The ideal amount of clusters is not too obvious with this visualization, but the elbow method suggests that it lies around five clusters. Next, we output the results of K-means using specifically 5 clusters. The data below
+                shows that the clusters are spread somewhat evenly, but the more concerning visualization to us was how well these clusters mapped to average wins. If each cluster had been created well, then we would expect to see a smooth
+                gradient of wins between each cluster. With the exception of a couple of columns, this proved to be fairly true. These results for K-means with 5 clusters are shown below.
+            </p>
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-5.png" alt="K-Means Visualization">
+            <img class="half" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-5.png" alt="Average Wins Per Cluster">
+            <p>
+                As mentioned earlier, a perfect dataset could map all players into the correct grouping of 17 clusters. Although the elbow method suggested 5 clusters, we wanted to view the dataset from this perspective too. The output shows
+                is again mapped somewhat evenly. Analyzing how well clusters mapped to our ideal gradient of 0 through 16 wins, we found a reasonable spread of average wins. The average wins per cluster range from roughly 2 to 10 wins. While
+                this is not perfect, it is well enough of a spread to prove features hold relevance when projecting season wins. These results for K-means with 17 clusters are shown below.
+            </p>
+            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-visual-17.png" alt="K-Means Visualization">
+            <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/kmeans-avg-17.png" alt="Average Wins Per Cluster">
+          <h3>Principal Component Analysis</h3>
+            <p>To retain 99% of the variance of the original training data, we determined by analyzing its singular values that the required dimensionality reduces from 36 to 24. To recover 95% of the variance, it reduces to 18  — half of the original dimension. Moving forward, this will likely improve our regression models and other supervised learning correlation methods since there are less features to compare. The scree plot below shows the breakdown of the proportion of variance among the first 18 components. The adjacent table shows these values along with the most relevant feature within each principal component. 
+            <img id="scree" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/scree.png" alt="Scree Plot">
+            <img id="pca_table" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/table.png" alt="PCA Table">
+            <p><br>The 3 bar charts below show a more detailed breakdown of the 36 original features within the first 3 principal components.<br><br></p>
+            <img src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/bars.png" alt="PCA Bar Charts">
+        </div>        
+    </section>
+    <section class="results">
+        <div class="wrapper">
+            <h2>Supervised Results</h2> 
+            <p>Our work with unsupervised machine learning helped us trim our features down to only the most important ones, as well as visualize how quarterbacks can be grouped based on
+                specific features. We next moved towards supervised learning to design models that can predict quarterback wins in a single season. We tried a variety of supervised methods
+                to this end, the results of which are shown below.
+            </p>
+            <h3>Logistic Regression</h3>
+            <p>
+
+            </p>
+            <h3>Ridge Regression</h3>
+            <p>
+
+            </p>
+            <h3>Random Forest</h3>
+            <p>
+
+            </p>
+            <h3>Neural Network</h3>
+            <p>
+
             </p>
         </div>        
     </section>
