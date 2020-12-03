@@ -163,25 +163,20 @@
             </p>
             <img class="center_wide" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/SupervisedTable.PNG" alt="Supervised Learning Results">
             <h3>Logistic Regression</h3>
-            <p>Text</p>
+            <p>Logistic Regression was tested to build a simple linear classifier to predict the number of wins the following year. When used to predict the exact number of wins the following season,
+          the model performed very poorly with an accuracy of 10.9% and an average F1 score of 0.069. The model was then built to predict certain win ranges for the following season. As shown above, 
+          the model was tested on 4 equally sized win ranges (0-4 wins, 5-8, 9-12, and 13-16) and 2 equally sized win ranges (0-8 wins and 8-16). This significantly increased the accuracy and F1 score 
+          of the model compared to the the no-grouping classification. The 2-class classification had the highest accuracy and F1-score out of the logistic regression models tested. The F1-score is lower 
+          than the accuracy for each of the win ranges. When combined with the fact that the dataset does have class imbalance (there are significantly more samples with a small number of wins compared to a 
+          large number of wins), this does not bode well for the model performance. One attribute about the logisitic regression model that makes it more useful than other models is that a probability distribution 
+          is made for how likely a quarterback is going to have each of the specified win ranges. This is a useful output for owners and general managers to have when seeing how likely each of the outcomes the 
+          following season could have.</p>
             <h3>Ridge Regression</h3>
             <p>Text</p>
             <h3>Random Forest</h3>
             <p>Text</p>
             <h3>Neural Network</h3>
             <p>Text</p>
-        </div>        
-    </section>
-    <section class="analysis">
-        <div class="wrapper">
-            <h2>Analysis</h2> 
-            <p>
-                After utilizing a variety of supervised techniques on our dataset, we found similar accuracies for all of them. This suggested that we were essentially maxing out on how
-                powerful our model could be given our dataset and revised features. We wanted to see if any specific changes to the models could improve our accuracy, if even by just a little
-                bit. We analyzed which datapoints were most frequently being misclassified by our supervised models to see if there were any outstanding issues. One thing that stood out to us
-                was that our model struggled with seasons where a quarterback was injured or played fewer games for any other reason. Because our models predict the wins for the following
-                season, the models would almost certainly underestimate how many wins the quarterback would achieve in the next season.
-            </p>
         </div>        
     </section>
     <section class="references">
