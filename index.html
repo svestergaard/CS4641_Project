@@ -172,7 +172,13 @@
           is made for how likely a quarterback is going to have each of the specified win ranges. This is a useful output for owners and general managers to have when seeing how likely each of the outcomes the 
           following season could have.</p>
             <h3>Ridge Regression</h3>
-            <p>Text</p>
+            <p>Ridge regression was used to analyze how a different regression method could perform on our dataset in comparison to logistic regression. The main difference to note is that
+                logistic regression is a classification model, whereas ridge regression predicts the number of wins as a continuous value. Obviously, this isn't super indicative of anything
+                for our dataset, so we round these values to make them more useful. When predicting exactly how many wins a quarterback would get in the following season, this model achieved
+                an accuracy of 11.5% and an F-score of 0.08. When using 4-class classification, this model achieved an accuracy of 43.8% and an F-score of 0.31. When using 2-class
+                classification, this model achieved an accuracy of 74.6% and an F-score of 0.58. These results are essentially on par with our other models. If anything, it performed slightly
+                more poorly than the other three supervised models we used. Ridge regression also showed an average r-squared value of 0.27.
+            </p>
             <h3>Random Forest</h3>
             <p>Text</p>
             <h3>Neural Network</h3>
@@ -204,7 +210,7 @@
                     scored by a quarterback can be expected to be 6 times as many touchdowns that were scored. However, the linear dependency sat around 0.995, probably due to 2-point conversions
                     or something similar.
                 </p>
-        </div>        
+        </div>
     </section>
     <section class="references">
         <div class="wrapper">
