@@ -182,7 +182,15 @@
             <h3>Random Forest</h3>
             <p>Text</p>
             <h3>Neural Network</h3>
-            <p>Text</p>
+            <p>A neural network was also selected since they can potentially learn nonlinear relationships from complex datasets. We used the MLPClassifier and MLPRegressor from scikit-learn, which is 
+                a relatively simple, feed-forward neural network. Neural networks require significant hyperparameter tuning in order to optimize their performance, so GridSearchCV, another scikit-learn class,
+                was used to search over a parameter space, with the scoring set to optimize R2 score for regression, and F1-score for classification. We decided that F1-score, rather than accuracy
+                was a better measure of performance due to the previously mentioned class imbalance. The classification results were very similar to our other methods, with an accuracy of 8% and F-score of
+                .06 on exact classification. This improved to 50% accuracy and an F-score of .34 for 4-class classification, and further still to 76% accuracy and a .56 F-score for 2-class classification. Our hyperparameter 
+                tuning found that the performance was best when the activation function was ReLU, and when there were 2-4 hidden layers, with 50-100 nodes per layer, depending on the number of classes. When performing
+                regression, we achieved an R2 of .27, similar to our ridge regression result. Interestingly, this model performed best when there were no hidden layers at all, which would mean that the neural 
+                network is effectively identical to linear regression. This would explain the similarity between the two methods.
+            </p>
         </div>        
     </section>
     <section class="analysis">
