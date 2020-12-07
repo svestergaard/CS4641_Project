@@ -124,7 +124,8 @@
             and statistical analysis. Ideally, our model could provide a new means of predicting the utility of quarterbacks in the NFL.
             </p>
             <h3>Linearly Independent Features</h3>
-            <p>As expected after manually cleaning the data and removing calculated features, the number of linearly indepent features is equivalent to the total number of features in our dataset. This essentially means there is no redundant information.</p>
+            <p>As expected after manually cleaning the data and removing calculated features, the number of completely linearly indepent features (correlation != 1.0) is equivalent to the total number of features in our dataset. That said, as shown in the correlatoin matrix below, there are several features that are closely related including some with a correlation of over 0.9. While we decided to keep all of these features included in the dataset, a recommendation for the future would be to set a lower criteria for classifying linear dependency.</p>
+            <img class="center" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/corr_matrix.png" alt="Correlation Matrix">
             <h3>K-Means Analysis</h3>
             <p>
                 We wanted to perform unsupervised clustering on our dataset to see if we could identify any trends in the data. With a perfect dataset, we would expect that K-Means would group data points into 17 distinct groups,
@@ -180,7 +181,8 @@
                 more poorly than the other three supervised models we used. Ridge regression also showed an average r-squared value of 0.27.
             </p>
             <h3>Random Forest</h3>
-            <p>Text</p>
+            <p>We also attempted the Random Forest method to classify the future wins which, due to its randomness and probabalistic approach, should lessen the impact of overfitting issues with the training data. After experimenting over a range of hyperparameters, the best outcomes for the three data breakdowns are shown in the table. The accuracies and F-scores closely resemble those obtained with the other methods with around a 76% accuracy for the two-class set and around 12% for the full range of wins. One interesting advantage to this method is the ability to analyze the most relevant and important features used in classifying the data. Shown below, the top three features were the yards advanced per game by the quarterback, the number of team wins in the current season where the quarterback is a starting player, and the total yards advanced in the current season by the quarterback.</p>
+            <img class="center-mid" src="https://raw.githubusercontent.com/svestergaard/CS4641_Project/master/pages/images/important_features.PNG" alt="Most Important Features">
             <h3>Neural Network</h3>
             <p>A neural network was also selected since they can potentially learn nonlinear relationships from complex datasets. We used the MLPClassifier and MLPRegressor from scikit-learn, which is 
                 a relatively simple, feed-forward neural network. Neural networks require significant hyperparameter tuning in order to optimize their performance, so GridSearchCV, another scikit-learn class,
